@@ -9,6 +9,9 @@ export const ProductList = ({
   total,
   setTotal,
 }) => {
+  
+  //Acción para agregar producto
+
   const onAddProduct = (product) => {
     if (allProducts.find((item) => item.id == product.id)) {
       const products = allProducts.map((item) =>
