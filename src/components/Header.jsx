@@ -10,6 +10,7 @@ const Header = ({
 }) => {
   const [active, setActive] = useState(false);
 
+  // Proceso para eliminar producto
   const onDeleteProduct = (product) => {
     const results = allProducts.filter((item) => item.id != product.id);
     setTotal(total - product.price * product.quantity);
@@ -17,6 +18,7 @@ const Header = ({
     setAllProducts(results);
   };
 
+  // Limpiar carrito
   const onCleanCart = () => {
     setAllProducts([]);
     setTotal(0);
